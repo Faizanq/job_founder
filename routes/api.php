@@ -41,6 +41,12 @@ Route::apiResource('categories','API\Category\CategoryController',['only'=>['ind
 Route::apiResource('positions','API\Position\PositionController',['only'=>['index']]);
 
 
+/*
+*  Auth
+*/
+Route::post('register','API\Auth\AuthController@register');
+
+
 
 
 

@@ -18,8 +18,9 @@ class AuthController extends ApiController
      * @param  [string] password_confirmation
      * @return [string] message
      */
-    public function signup(Request $request)
+    public function Register(Request $request)
     {
+
         $request->validate([
             'first_name' => 'required|string',
             'last_name' => 'required|string',
@@ -27,6 +28,7 @@ class AuthController extends ApiController
             'password' => 'required|string',
             'user_type' => 'required|string'
         ]);
+
         $user = new User([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,

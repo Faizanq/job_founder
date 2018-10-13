@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->text('about')->nullable();
             $table->string('location')->nullable();
             $table->string('profile_image')->nullable();
-            $table->string('is_notify');
+            $table->string('is_notify')->default(1);
             $table->string('otp')->nullable();
             $table->string('is_mobile_verified')->default(0);
             $table->string('dob')->nullable();
@@ -42,7 +42,7 @@ class CreateUsersTable extends Migration
             $table->string('city')->nullable();
             $table->string('zip_code')->nullable();
             $table->string('user_type')->default(User::USER);
-            $table->string('email_verification_token_timeout');
+            $table->string('email_verification_token_timeout')->nullable();
             $table->string('verify_email_token')->nullable();
             $table->boolean('status')->default(User::ACTIVE);
             $table->string('access_token')->nullable();
